@@ -50,7 +50,6 @@ export const HomeContent = styled.div`
     text-align: center;
     font-family: 'Post No Bills Colombo', sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
 
     padding: 12px 30px 10px 30px;
@@ -169,6 +168,7 @@ export const ExperienceContainer = styled.div`
 export const ExperienceList = styled.ul`
   display: flex;
   gap: 50px;
+  margin-top: 50px;
 `;
 
 export const FirstExperienceCon = styled.li`
@@ -179,6 +179,7 @@ export const FirstExperienceCon = styled.li`
     font-family: 'SeoulHangang', sans-serif;
     font-size: 24px;
     font-weight: 400;
+    margin-bottom: 12px;
   }
   p {
     line-height: 27px;
@@ -198,6 +199,7 @@ export const SecondExperienceCon = styled.li`
     font-family: 'SeoulHangang', sans-serif;
     font-size: 24px;
     font-weight: 400;
+    margin-bottom: 12px;
   }
   p {
     line-height: 27px;
@@ -206,4 +208,80 @@ export const SecondExperienceCon = styled.li`
     font-size: 18px;
     font-weight: 400;
   }
+`;
+
+// Fourth Section
+
+export const FourthSection = styled.section`
+  width: 1218px;
+`;
+
+export const TitleAnswer = styled.h2`
+  color: var(--blue, #09035d);
+  font-family: 'SeoulHangang', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100.023%;
+`;
+
+export const AnswerList = styled.ul`
+  display: flex;
+  gap: 30px;
+  margin-top: 70px;
+  h3 {
+    color: var(--blue, #09035d);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  p {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  span {
+    color: var(--dark-violet, #7871de);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 16px;
+  }
+`;
+
+export const ShortLi = styled.li`
+  display: flex;
+  width: 326px;
+  height: 422px;
+  padding: 30px 30px 0 30px;
+  flex-direction: column;
+  border-radius: 4px;
+  background: var(--wight, #fff);
+  box-shadow: 4px 4px 20px 0px rgba(120, 113, 222, 0.1),
+    -4px -4px 20px 0px rgba(120, 113, 222, 0.1);
+`;
+
+export const LongerLi = styled.li`
+  display: flex;
+  width: 326px;
+  height: 479px;
+  padding: 30px;
+  padding-bottom: 0;
+  margin-top: -30px;
+  flex-direction: column;
+  align-items: center;
+  background: var(--wight, #fff);
+  box-shadow: 4px 4px 20px 0px rgba(120, 113, 222, 0.1),
+    -4px -4px 20px 0px rgba(120, 113, 222, 0.1);
+`;
+
+export const SpecialSpan = styled.span`
+  margin-right: auto;
+  margin-bottom: 10px;
+  font-family: 'Post No Bills Colombo', sans-serif;
+  font-weight: 600;
+`;
+
+export const SpecialP = styled.p`
+  margin-top: 10px;
 `;
