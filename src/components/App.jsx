@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './header/header';
+import Form from './form/Form';
 import HoneImg from '../images/Home.png';
-import ArrayReason from './arrayReason';
+import ArrayReason from './helpers/arrayReason';
+import Line from '../images/SVG/line.svg';
 import {
   FirstSection,
   SecondSection,
@@ -13,6 +15,7 @@ import {
   InfoContainer,
   InfoList,
   ReasonContainer,
+  ImgSvg,
   ReasonInfo,
   ReasonListLi,
   // third section
@@ -31,6 +34,13 @@ import {
   LongerLi,
   SpecialSpan,
   SpecialP,
+  // fifth section
+  Fifthsection,
+  FifthsectionContainer,
+  ListTrainingFirst,
+  ListTrainingSecond,
+  SpecialLi,
+  TitleContainer,
 } from './app.styled';
 
 const App = () => {
@@ -148,18 +158,64 @@ const App = () => {
               <p>
                 <span>200</span> дресованих собак, які отримали <span>350</span>
                  нагород на різних змаганнях{' '}
-                <SpecialP>
-                  <span>100</span> людей навчилися правильно дресирувати і
-                  спілкуватися зі своїми вихованцями
-                </SpecialP>
-                <SpecialP>
-                  <span> 2600</span> годин спільних занять та зустрічей
-                </SpecialP>
               </p>
+              <SpecialP>
+                <span>100</span> людей навчилися правильно дресирувати і
+                спілкуватися зі своїми вихованцями
+              </SpecialP>
+              <SpecialP>
+                <span> 2600</span> годин спільних занять та зустрічей
+              </SpecialP>
             </ShortLi>
           </AnswerList>
         </div>
       </FourthSection>
+
+      <Fifthsection>
+        <FifthsectionContainer>
+          <TitleContainer>
+            <h2>Етапи дресирування</h2>
+          </TitleContainer>
+          <ListTrainingFirst>
+            <li>
+              <h2>01</h2>
+              <p>Скликаний за телефоном або спілкування онлайн</p>
+            </li>
+            <SpecialLi>
+              <h2>02</h2>
+              <p>Розмовляємо про собаку</p>
+            </SpecialLi>
+            <li>
+              <h2>03</h2>
+              <p>Дізнаюсь причини звернення</p>
+            </li>
+            <SpecialLi>
+              <h2>04</h2>
+              <p>Дізнаюся зручний час занять</p>
+            </SpecialLi>
+          </ListTrainingFirst>
+          <img width="100%" src={Line} alt="Line" />
+          <ListTrainingSecond>
+            <li>
+              <h2>05</h2>
+              <p>Створюю графік занять</p>
+            </li>
+            <SpecialLi>
+              <h2>06</h2>
+              <p>Скидаю всю інформацію, з якою потрібно ознайомитись</p>
+            </SpecialLi>
+            <li>
+              <h2>07</h2>
+              <p>Знайомство із собакою.</p>
+            </li>
+            <SpecialLi>
+              <h2>08</h2>
+              <p>Навчання командам</p>
+            </SpecialLi>
+          </ListTrainingSecond>
+        </FifthsectionContainer>
+      </Fifthsection>
+      <Form />
     </main>
   );
 };

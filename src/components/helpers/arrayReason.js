@@ -1,11 +1,11 @@
-import Cat  from '../images/SVG/cat.svg';
-import Ball  from '../images/SVG/ball.svg';
-import Dog  from '../images/SVG/dog.svg';
-import Paw  from '../images/SVG/paw.svg';
-import Lead  from '../images/SVG/lead.svg';
-import Tresh  from '../images/SVG/tresh.svg';
-import Wolf  from '../images/SVG/wolf.svg';
-import Bone  from '../images/SVG/bone.svg';
+import Cat  from '../../images/SVG/cat.svg';
+import Ball  from '../../images/SVG/ball.svg';
+import Dog  from '../../images/SVG/dog.svg';
+import Paw  from '../../images/SVG/paw.svg';
+import Lead  from '../../images/SVG/lead.svg';
+import Tresh  from '../../images/SVG/tresh.svg';
+import Wolf  from '../../images/SVG/wolf.svg';
+import Bone  from '../../images/SVG/bone.svg';
 
 
 const ArrayReason = [

@@ -117,10 +117,8 @@ export const ReasonListLi = styled.li`
   background: var(--wight, #fff);
   box-shadow: 4px 4px 20px 0px rgba(120, 113, 222, 0.1),
     -4px -4px 20px 0px rgba(120, 113, 222, 0.1);
-  transition: all 3s ease;
+
   :hover {
-    border-radius: 4px;
-    background: var(--wight, #fff);
     box-shadow: 4px 4px 20px 0px rgba(120, 113, 222, 0.2),
       -4px -4px 20px 0px rgba(120, 113, 222, 0.2);
   }
@@ -136,8 +134,27 @@ export const ReasonInfo = styled.div`
   gap: 20px;
   border-radius: 4px;
   background: var(--wight, #fff);
-  :hover {
-    background: var(--wight, #fff);
+  transition: all 0.7s ease;
+  p {
+    font-family: 'Post No Bills Colombo', sans-serif;
+    pointer-events: none;
+  }
+  img {
+    /* pointer-events: none; */
+    :hover {
+      /* background-color: red; */
+    }
+  }
+`;
+
+export const ImgSvg = styled.svg`
+  transition: all 0.7s ease;
+  /* Your default styles here */
+
+  &:hover {
+    path {
+      fill: black;
+    }
   }
 `;
 
@@ -284,4 +301,88 @@ export const SpecialSpan = styled.span`
 
 export const SpecialP = styled.p`
   margin-top: 10px;
+  color: var(--black, #0f0f10);
+  font-family: 'Post No Bills Colombo', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+`;
+
+// fifth section
+
+export const Fifthsection = styled.section`
+  margin: 80px 0;
+`;
+
+export const FifthsectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+`;
+
+export const TitleContainer = styled.div`
+  width: 1245px;
+  margin-bottom: 35px;
+  h2 {
+    color: var(--blue, #09035d);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+  }
+`;
+
+export const ListTrainingFirst = styled.ul`
+  display: flex;
+  column-gap: 40px;
+  li {
+    width: 282px;
+    :hover {
+      color: var(--dark-violet, #7871de);
+    }
+  }
+  h2 {
+    color: var(--green, #9fdb3d);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    transition: all 0.7s ease;
+  }
+  p {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    pointer-events: none;
+  }
+`;
+
+export const ListTrainingSecond = styled.ul`
+  display: flex;
+  column-gap: 40px;
+  li {
+    width: 282px;
+    :hover {
+      color: var(--dark-violet, #7871de);
+    }
+  }
+  h2 {
+    color: var(--green, #9fdb3d);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    transition: all 0.7s ease;
+  }
+  p {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    pointer-events: none;
+  }
+`;
+
+export const SpecialLi = styled.li`
+  margin-top: 60px;
 `;
