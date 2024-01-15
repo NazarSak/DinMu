@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Section,
   FormCon,
@@ -9,20 +9,54 @@ import {
   Paragraph,
   AgreeContainerClick,
   AgreeContainer,
+  StyledCheckbox,
 } from './form.styled';
 
 const Form = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [agreed, setAgreed] = useState(false);
+
+  const onSubmit = e => {
+    e.preventDefault();
+    if (agreed) {
+      console.log('name', name);
+      console.log('email', email);
+      setName('');
+      setEmail('');
+    } else {
+      alert('Погодьтесь з умовами');
+    }
+  };
+
   return (
     <Section>
       <div>
-        <FormCon>
+        <FormCon onSubmit={onSubmit}>
           <ConainerInputs>
-            <Input type="text" placeholder="Ваше імя" />
-            <Input type="email" placeholder="Ваше пошта" />
+            <Input
+              type="text"
+              placeholder="Ваше імя"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              required
+            />
+            <Input
+              type="email"
+              placeholder="Ваше пошта"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
           </ConainerInputs>
           <AgreeContainerClick>
             <AgreeContainer>
-              <CheckBox type="checkbox" />
+              <CheckBox
+                type="checkbox"
+                onChange={() => setAgreed(prevState => !prevState)}
+                checked={agreed}
+              />
+              <StyledCheckbox checked={agreed} />
               <Paragraph>
                 Погоджуюся з <span>умовами</span> обробки даних
               </Paragraph>

@@ -4,6 +4,7 @@ import Form from './form/Form';
 import HoneImg from '../images/Home.png';
 import ArrayReason from './helpers/arrayReason';
 import Line from '../images/SVG/line.svg';
+import LineBall from '../images/lineBall.png';
 import {
   FirstSection,
   SecondSection,
@@ -41,6 +42,13 @@ import {
   ListTrainingSecond,
   SpecialLi,
   TitleContainer,
+  // sixth section
+  SixthSection,
+  // seven section
+  SevenSection,
+  ContainerLine,
+  ImgLineBall,
+  ListComands,
 } from './app.styled';
 
 const App = () => {
@@ -215,7 +223,61 @@ const App = () => {
           </ListTrainingSecond>
         </FifthsectionContainer>
       </Fifthsection>
+
       <Form />
+
+      <SixthSection>
+        <div>
+          <TitleAnswer>Відгуки</TitleAnswer>
+          <AnswerList>
+            <ShortLi>
+              <p>
+                Я хочу сказати велике спасибі вам! Ви були з нами в
+                найскладніший момент і тільки завдяки вам ми змогли подолати всі
+                труднощі.
+              </p>
+              <h4>Леонід Петрович</h4>
+            </ShortLi>
+            <ShortLi>
+              <p>
+                Добридень. Я хочу поділитися щирими емоціями після занять з моїм
+                улюбленим кінологом. Вона вчить розуміти, і отримувати
+                задоволення від життя з чотириногим другом.
+              </p>
+              <p>
+                Дякую вам ще раз! Сподіваюся, що далі більше і ми з вами ще
+                багато разом радітимемо успіхам Марі, яких би не було без вас!
+              </p>
+              <p>Вона той фахівець, якого я шукала кілька місяців.</p>
+              <h4>Інна Муравйова</h4>
+            </ShortLi>
+            <ShortLi>
+              <p>Спасибо вам огромное</p>
+              <h4>Олександр М.</h4>
+            </ShortLi>
+          </AnswerList>
+        </div>
+      </SixthSection>
+
+      <SevenSection>
+        <TitleThird>Чому навчаю</TitleThird>
+        <ListComands>
+          <li>
+            <p>«Перестань тягнути повідець»</p>
+          </li>
+          <li>
+            <p>«Поруч»</p>
+          </li>
+          <li>
+            <p>"ФАС"</p>
+          </li>
+        </ListComands>
+        <ContainerLine>
+          <h3>КОМАНДИ</h3>
+          <ImgLineBall src={LineBall} alt="LineBall" />
+          <span>10 000₽</span>
+        </ContainerLine>
+      </SevenSection>
     </main>
   );
 };

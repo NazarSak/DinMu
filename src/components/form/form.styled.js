@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import Checker from '../../images/SVG/checkMarker.svg';
+import DisableChecker from '../../images/SVG/disableCheckMak.svg';
+
 
 export const Section = styled.section`
   background-color: var(--dark-violet, #7871de);
@@ -28,10 +31,9 @@ export const Input = styled.input`
   border: 1px solid var(--blue, #09035d);
   background: var(--wight, #fff);
   &:focus {
-    border: 2px solid var(--green, #9FDB3D);
+    border: 2px solid var(--green, #9fdb3d);
   }
 `;
-
 
 export const Button = styled.button`
   display: flex;
@@ -51,14 +53,6 @@ export const Button = styled.button`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-`;
-
-export const CheckBox = styled.input`
-  width: 30px;
-  height: 30px;
-  &:checked {
-    appearance: green;
-  }
 `;
 
 export const Paragraph = styled.p`
@@ -82,4 +76,25 @@ export const AgreeContainerClick = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+`;
+
+export const CheckBox = styled.input`
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-left: 0px;
+`;
+
+export const StyledCheckbox = styled.div`
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  transition: all 0.3s;
+  background-image: url(${props => (props.checked ? Checker : DisableChecker)});
+  background-size: cover; 
+  &:focus {
+    box-shadow: 0 0 5px 0 #4caf50;
+  }
 `;

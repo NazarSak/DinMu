@@ -276,6 +276,13 @@ export const ShortLi = styled.li`
   background: var(--wight, #fff);
   box-shadow: 4px 4px 20px 0px rgba(120, 113, 222, 0.1),
     -4px -4px 20px 0px rgba(120, 113, 222, 0.1);
+  h4 {
+    color: var(--blue, #09035d);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+
+    font-weight: 600;
+  }
 `;
 
 export const LongerLi = styled.li`
@@ -348,6 +355,7 @@ export const ListTrainingFirst = styled.ul`
     font-size: 60px;
     font-weight: 600;
     transition: all 0.7s ease;
+    cursor: default;
   }
   p {
     color: var(--black, #0f0f10);
@@ -385,4 +393,57 @@ export const ListTrainingSecond = styled.ul`
 
 export const SpecialLi = styled.li`
   margin-top: 60px;
+`;
+
+// sixth section
+
+export const SixthSection = styled.section`
+  margin: 80px 0;
+`;
+
+// seven section
+
+export const SevenSection = styled.section`
+  margin-bottom: 80px;
+`;
+
+export const ImgLineBall = styled.img`
+  width: 772px;
+`;
+
+export const ContainerLine = styled.div`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  h3 {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  span {
+    color: var(--black, #0f0f10);
+    font-family: SeoulHangang, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-left: 15px;
+  }
+`;
+
+export const ListComands = styled.ul`
+  display: flex;
+  margin-right: auto;
+  gap: 21px;
+  margin-left: 66px;
+  p {
+    color: var(--blue, #09035d);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  li {
+    width: 282px;
+    display: flex;
+    align-items: flex-end;
+  }
 `;
