@@ -5,6 +5,10 @@ export const Container = styled.header`
   width: 1218px;
   align-items: center;
   margin-bottom: 40px;
+  @media screen and (max-width: 1199px) {
+width: 728px;
+
+  }
 `;
 
 export const Nav = styled.nav`
@@ -18,6 +22,9 @@ export const List = styled.ul`
   justify-content: flex-end;
   align-items: center;
   gap: 24px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 `;
 
 export const Anchor = styled.a`
@@ -28,10 +35,21 @@ export const Anchor = styled.a`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  cursor: pointer;
 `;
 
 export const ListMedia = styled.ul`
   display: flex;
   align-items: center;
   gap: 4px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+`;
+
+export const Img = styled.img`
+  cursor: pointer;
+  &:hover {
+    fill: black;
+  }
 `;

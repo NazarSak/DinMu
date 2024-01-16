@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Checker from '../../images/SVG/checkMarker.svg';
 import DisableChecker from '../../images/SVG/disableCheckMak.svg';
 
-
 export const Section = styled.section`
   background-color: var(--dark-violet, #7871de);
   padding: 80px 0;
@@ -53,6 +52,10 @@ export const Button = styled.button`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  transition: all 0.7s ease;
+  &:hover {
+    background: var(--dark-violet, #7871de);
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -93,7 +96,7 @@ export const StyledCheckbox = styled.div`
   height: 30px;
   transition: all 0.3s;
   background-image: url(${props => (props.checked ? Checker : DisableChecker)});
-  background-size: cover; 
+  background-size: cover;
   &:focus {
     box-shadow: 0 0 5px 0 #4caf50;
   }

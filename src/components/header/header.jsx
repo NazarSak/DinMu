@@ -5,39 +5,47 @@ import Facebbok from '../../images/SVG/facebook.svg';
 import Vk from '../../images/SVG/vk.svg';
 import Telegram from '../../images/SVG/telegram.svg';
 
-import { Anchor, List, Container, Nav,ListMedia } from './header.styled';
+import { Anchor, List, Container, Nav,ListMedia,Img } from './header.styled';
 const Header = () => {
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Container>
       <img width="112px" height="32px" src={Logo} alt="ad" />
       <Nav>
-        <List>
+        <List> 
           <li>
-            <Anchor href="/">Причини дресирування</Anchor>
+            <Anchor onClick={() => scrollToSection('reasons')}>Причини дресирування</Anchor>
           </li>
           <li>
-            <Anchor href="/">З кінологом краще</Anchor>
+            <Anchor onClick={() => scrollToSection('withKynolog')}>З кінологом краще</Anchor>
           </li>
           <li>
-            <Anchor href="/">Чому я</Anchor>
+            <Anchor onClick={() => scrollToSection('whyI')}>Чому я</Anchor>
           </li>
           <li>
-            <Anchor href="/">Етапи дресирування</Anchor>
+            <Anchor onClick={() => scrollToSection('etaps')}>Етапи дресирування</Anchor>
           </li>
           <li>
-            <Anchor href="/">Відгуки</Anchor>
+            <Anchor onClick={() => scrollToSection('reviews')}>Відгуки</Anchor>
           </li>
           <li>
-            <Anchor href="/">Чому навчаю</Anchor>
+            <Anchor onClick={() => scrollToSection('teaching')}>Чому навчаю</Anchor>
           </li>
           <li>
-            <Anchor href="/">часті питання</Anchor>
+            <Anchor onClick={() => scrollToSection('questions')}>часті питання</Anchor>
           </li>
         </List>
 
         <ListMedia>
           <li>
-            <img src={Viber} alt="" />
+            <Img src={Viber} alt="" />
           </li>
           <li>
             <img src={Facebbok} alt="" />

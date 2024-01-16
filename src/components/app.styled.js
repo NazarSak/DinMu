@@ -9,6 +9,9 @@ export const SecondSection = styled.section``;
 
 export const GeneralContainer = styled.div`
   display: flex;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const HomeContainer = styled.div`
@@ -18,6 +21,10 @@ export const HomeContainer = styled.div`
   width: 520px;
   border-radius: 93px 0 0 0;
   background-color: white;
+  @media screen and (max-width: 1200px) {
+    background: transparent;
+    width: 653px;
+  }
 `;
 
 export const HomeContent = styled.div`
@@ -59,23 +66,47 @@ export const HomeContent = styled.div`
     border-radius: 4px;
     background: var(--blue, #09035d);
     box-shadow: 4px 4px 20px 0px rgba(9, 3, 93, 0.1);
+    transition: all 0.7s ease;
+    &:hover {
+      background: var(--dark-violet, #7871de);
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+    margin-top: 25px;
   }
 `;
 
 export const ImgDog = styled.img`
   width: 698px;
   height: 500px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 `;
+
+export const ImgTabletDog = styled.img`
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+  width: 728px;
+  height: 421px;
+`;
+
 // second Section
 export const InfoContainer = styled.div`
   width: 802px;
   height: 142px;
   margin-top: 90px;
+  @media screen and (max-width: 1199px) {
+    width: 728px;
+    height: 142px;
+  }
 `;
 
 export const InfoList = styled.ul`
   display: flex;
-  gap: 30px;
+  gap: 20px;
   li {
     display: flex;
     width: 178px;
@@ -90,6 +121,19 @@ export const InfoList = styled.ul`
     text-align: center;
     font-family: 'Post No Bills Colombo', sans-serif;
     font-size: 18px;
+  }
+  h2 {
+    color: var(--blue, #09035d);
+    text-align: center;
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+  }
+  @media screen and (max-width: 1199px) {
+    li {
+      width: 167px;
+      height: 142px;
+    }
   }
 `;
 
@@ -111,6 +155,10 @@ export const ReasonContainer = styled.div`
     flex-wrap: wrap;
     gap: 30px;
   }
+  @media screen and (max-width: 1199px) {
+    width: 728px;
+    height: 420px;
+  }
 `;
 
 export const ReasonListLi = styled.li`
@@ -128,7 +176,6 @@ export const ReasonInfo = styled.div`
   display: flex;
   width: 282px;
   height: 112px;
-  /* padding: 20px 20px 28px 20px; */
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -140,10 +187,15 @@ export const ReasonInfo = styled.div`
     pointer-events: none;
   }
   img {
-    /* pointer-events: none; */
-    :hover {
-      /* background-color: red; */
-    }
+    pointer-events: none;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 119px;
+    height: 122px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
 `;
 
@@ -164,6 +216,9 @@ export const ThirdSection = styled.section`
   background-color: var(--dark-violet, #7871de);
   padding: 60px 0 45px;
   margin: 80px 0;
+  @media screen and (max-width: 1199px) {
+    padding: 80px 0;
+  }
 `;
 
 export const ContainerWrapper = styled.div``;
@@ -175,17 +230,28 @@ export const TitleThird = styled.h2`
   font-weight: 400;
   line-height: 100.023%;
   margin-left: -105px;
+  @media screen and (max-width: 1199px) {
+    margin-left: 0;
+  }
 `;
 
 export const ExperienceContainer = styled.div`
   width: 1010px;
   height: 207px;
+  @media screen and (max-width: 1199px) {
+    width: 728px;
+    height: 289px;
+  }
 `;
 
 export const ExperienceList = styled.ul`
   display: flex;
   gap: 50px;
   margin-top: 50px;
+  @media screen and (max-width: 1199px) {
+    gap: 20px;
+    margin-top: 40px;
+  }
 `;
 
 export const FirstExperienceCon = styled.li`
@@ -204,6 +270,10 @@ export const FirstExperienceCon = styled.li`
     font-family: 'SeoulHangang', sans-serif;
     font-size: 18px;
     font-weight: 400;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 354px;
+    height: 289px;
   }
 `;
 
@@ -224,6 +294,11 @@ export const SecondExperienceCon = styled.li`
     font-family: 'SeoulHangang', sans-serif;
     font-size: 18px;
     font-weight: 400;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 354px;
+    height: 127px;
   }
 `;
 
@@ -407,6 +482,20 @@ export const SevenSection = styled.section`
   margin-bottom: 80px;
 `;
 
+export const TitleCommandsCon = styled.div`
+  width: 1176px;
+  h2 {
+    color: var(--blue, #09035d);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100.023%;
+    margin-bottom: 60px;
+    margin-right: auto;
+  }
+`;
+
 export const ImgLineBall = styled.img`
   width: 772px;
 `;
@@ -432,9 +521,8 @@ export const ContainerLine = styled.div`
 
 export const ListComands = styled.ul`
   display: flex;
-  margin-right: auto;
   gap: 21px;
-  margin-left: 66px;
+  margin-left: 42px;
   p {
     color: var(--blue, #09035d);
     font-family: 'Post No Bills Colombo', sans-serif;
@@ -446,4 +534,64 @@ export const ListComands = styled.ul`
     display: flex;
     align-items: flex-end;
   }
+`;
+
+export const ListComandsSecond = styled.ul`
+  display: flex;
+  gap: 127px;
+  margin-left: 147px;
+  align-items: flex-start;
+  p {
+    color: var(--blue, #09035d);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  li {
+    width: 175px;
+    display: flex;
+    align-items: flex-end;
+  }
+  span {
+    font-size: 16px;
+  }
+`;
+
+// eighth section
+
+export const EighthSection = styled.section`
+  padding: 80px 0;
+`;
+
+export const ListQuestion = styled.ul`
+  display: flex;
+  flex-direction: column;
+  row-gap: 19px;
+  width: 802px;
+`;
+
+export const Question = styled.span`
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--blue, #09035d);
+  font-family: 'Post No Bills Colombo', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  width: 740px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Answer = styled.div`
+  display: ${props => (props.isopen ? 'block' : 'none')};
+  color: var(--black, #0f0f10);
+  font-family: 'Post No Bills Colombo', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+`;
+
+export const ArrowClosed = styled.img`
+  transform: rotate(${props => (props.isopen ? '0deg' : '180deg')});
+  transition: transform 0.3s ease;
 `;

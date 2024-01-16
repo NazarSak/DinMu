@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './header/header';
+import Footer from './footer/footer';
 import Form from './form/Form';
 import HoneImg from '../images/Home.png';
+import HoneTabletImg from '../images/HomeTablet.png';
+
 import ArrayReason from './helpers/arrayReason';
 import Line from '../images/SVG/line.svg';
 import LineBall from '../images/lineBall.png';
+import ArrowClose from '../images/SVG/arrowClose.svg';
+
 import {
   FirstSection,
   SecondSection,
@@ -12,11 +17,11 @@ import {
   HomeContainer,
   HomeContent,
   ImgDog,
+  ImgTabletDog,
   // second section
   InfoContainer,
   InfoList,
   ReasonContainer,
-  ImgSvg,
   ReasonInfo,
   ReasonListLi,
   // third section
@@ -46,14 +51,53 @@ import {
   SixthSection,
   // seven section
   SevenSection,
+  TitleCommandsCon,
   ContainerLine,
   ImgLineBall,
   ListComands,
+  ListComandsSecond,
+  // eighth section
+  EighthSection,
+  Question,
+  Answer,
+  ArrowClosed,
+  ListQuestion,
 } from './app.styled';
 
 const App = () => {
-  const stopPropagation = event => {
-    event.stopPropagation();
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [isOpen5, setIsOpen5] = useState(false);
+
+  const handleToggle = index => {
+    switch (index) {
+      case 1:
+        setIsOpen1(!isOpen1);
+        break;
+      case 2:
+        setIsOpen2(!isOpen2);
+        break;
+      case 3:
+        setIsOpen3(!isOpen3);
+        break;
+      case 4:
+        setIsOpen4(!isOpen4);
+        break;
+      case 5:
+        setIsOpen5(!isOpen5);
+        break;
+      default:
+        break;
+    }
+  };
+
+  const scrollToSection = sectionId => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -68,14 +112,17 @@ const App = () => {
                 кінолога
               </h2>
               <p>Збережуть нервові клітини та порядок у будинку</p>
-              <button>Стати вчителем четвероного друга</button>
+              <button onClick={() => scrollToSection('form')}>
+                Стати вчителем четвероного друга
+              </button>
             </HomeContent>
           </HomeContainer>
           <ImgDog src={HoneImg} alt="" />
+          <ImgTabletDog src={HoneTabletImg} alt="" />
         </GeneralContainer>
       </FirstSection>
 
-      <SecondSection>
+      <SecondSection id="reasons">
         <InfoContainer>
           <InfoList>
             <li>
@@ -98,7 +145,7 @@ const App = () => {
           <ul>
             {ArrayReason.map(({ content, imgSrc, imgAlt }, index) => (
               <ReasonListLi key={index}>
-                <ReasonInfo onFocus={stopPropagation}>
+                <ReasonInfo>
                   <img src={imgSrc} alt={imgAlt} />
                   <p>{content}</p>
                 </ReasonInfo>
@@ -108,7 +155,7 @@ const App = () => {
         </ReasonContainer>
       </SecondSection>
 
-      <ThirdSection>
+      <ThirdSection id="withKynolog">
         <ContainerWrapper>
           <TitleThird>З кінологом краще</TitleThird>
           <ExperienceContainer>
@@ -135,7 +182,7 @@ const App = () => {
         </ContainerWrapper>
       </ThirdSection>
 
-      <FourthSection>
+      <FourthSection id="whyI">
         <div>
           <TitleAnswer>Чому я</TitleAnswer>
           <AnswerList>
@@ -179,7 +226,7 @@ const App = () => {
         </div>
       </FourthSection>
 
-      <Fifthsection>
+      <Fifthsection id="etaps">
         <FifthsectionContainer>
           <TitleContainer>
             <h2>Етапи дресирування</h2>
@@ -223,10 +270,11 @@ const App = () => {
           </ListTrainingSecond>
         </FifthsectionContainer>
       </Fifthsection>
+      <section id="form">
+        <Form />
+      </section>
 
-      <Form />
-
-      <SixthSection>
+      <SixthSection id="reviews">
         <div>
           <TitleAnswer>Відгуки</TitleAnswer>
           <AnswerList>
@@ -259,25 +307,101 @@ const App = () => {
         </div>
       </SixthSection>
 
-      <SevenSection>
-        <TitleThird>Чому навчаю</TitleThird>
-        <ListComands>
-          <li>
-            <p>«Перестань тягнути повідець»</p>
-          </li>
-          <li>
-            <p>«Поруч»</p>
-          </li>
-          <li>
-            <p>"ФАС"</p>
-          </li>
-        </ListComands>
-        <ContainerLine>
-          <h3>КОМАНДИ</h3>
-          <ImgLineBall src={LineBall} alt="LineBall" />
-          <span>10 000₽</span>
-        </ContainerLine>
+      <SevenSection id="teaching">
+        <TitleCommandsCon>
+          <h2>Чому навчаю</h2>
+
+          <ListComands>
+            <li>
+              <p>«Перестань тягнути повідець»</p>
+            </li>
+            <li>
+              <p>«Поруч»</p>
+            </li>
+            <li>
+              <p>"ФАС"</p>
+            </li>
+          </ListComands>
+          <ContainerLine>
+            <h3>КОМАНДИ</h3>
+            <ImgLineBall src={LineBall} alt="LineBall" />
+            <span>4500₴</span>
+          </ContainerLine>
+          <ListComandsSecond>
+            <li>
+              <p>"До мене"</p>
+            </li>
+            <li>
+              <p>
+                «Тріо<span>: сидіти, стояти, лежати»</span>
+              </p>
+            </li>
+            <li>
+              <p>"ФУ"</p>
+            </li>
+          </ListComandsSecond>
+        </TitleCommandsCon>
       </SevenSection>
+
+      <Form />
+
+      <EighthSection id="questions">
+        <TitleCommandsCon>
+          <h2>Відповіді на часті запитання</h2>
+        </TitleCommandsCon>
+        <ListQuestion>
+          <li>
+            <Question onClick={() => handleToggle(1)}>
+              Чи можна онлайн навчити собаку?
+              <ArrowClosed isopen={isOpen1 ? 1 : 0} src={ArrowClose} alt="" />
+            </Question>
+            <Answer isopen={isOpen1 ? 1 : 0}>
+              Так можна,але ми рекомендую проводити навчання в очному форматі
+            </Answer>
+          </li>
+          <li>
+            <Question onClick={() => handleToggle(2)}>
+              Як відбувається оплата?
+              <ArrowClosed isopen={isOpen2 ? 1 : 0} src={ArrowClose} alt="" />
+            </Question>
+            <Answer isopen={isOpen2 ? 1 : 0}>
+              Оплата можна здійснити як і готівкою як і через реквізити
+            </Answer>
+          </li>
+          <li>
+            <Question onClick={() => handleToggle(3)}>
+              Чи буде подальше спілкування після занять?
+              <ArrowClosed isopen={isOpen3 ? 1 : 0} src={ArrowClose} alt="" />
+            </Question>
+            <Answer isopen={isOpen3 ? 1 : 0}>
+              Так буде. У мене є чат. Там все розмовляють, ставлять одне одному
+              питання. Надсилають як вони займаються або повторюють все вдома.
+            </Answer>
+          </li>
+          <li>
+            <Question onClick={() => handleToggle(4)}>
+              Що якщо не вийде?
+              <ArrowClosed isopen={isOpen4 ? 1 : 0} src={ArrowClose} alt="" />
+            </Question>
+            <Answer isopen={isOpen4 ? 1 : 0}>
+              Якщо тварина не зможе засвоїти тренування ми повернемо вам повну
+              вартість курсу
+            </Answer>
+          </li>
+          <li>
+            <Question onClick={() => handleToggle(5)}>
+              Що я отримаю в кінці?
+              <ArrowClosed isopen={isOpen5 ? 1 : 0} src={ArrowClose} alt="" />
+            </Question>
+            <Answer isopen={isOpen5 ? 1 : 0}>
+              Після закінчення ви отримаєте сертифікат про успішне закінчення
+              курсу та навчену тварину
+            </Answer>
+          </li>
+        </ListQuestion>
+      </EighthSection>
+
+      <Footer />
     </main>
   );
 };
