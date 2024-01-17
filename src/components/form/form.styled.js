@@ -11,6 +11,9 @@ export const FormCon = styled.form`
   display: flex;
   gap: 135px;
   align-items: center;
+  @media screen and (max-width: 1199px) {
+  gap: 30px;
+  }
 `;
 
 export const ConainerInputs = styled.div`

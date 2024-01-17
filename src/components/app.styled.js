@@ -158,6 +158,9 @@ export const ReasonContainer = styled.div`
   @media screen and (max-width: 1199px) {
     width: 728px;
     height: 420px;
+    ul {
+      gap: 20px;
+    }
   }
 `;
 
@@ -306,6 +309,13 @@ export const SecondExperienceCon = styled.li`
 
 export const FourthSection = styled.section`
   width: 1218px;
+  @media screen and (max-width: 1199px) {
+    width: 728px;
+    padding: 0 20px;
+    div {
+      width: 100%;
+    }
+  }
 `;
 
 export const TitleAnswer = styled.h2`
@@ -339,6 +349,41 @@ export const AnswerList = styled.ul`
     font-family: 'SeoulHangang', sans-serif;
     font-size: 16px;
   }
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+`;
+
+export const AnswerListReviewed = styled.ul`
+  display: flex;
+  gap: 30px;
+  margin-top: 70px;
+  h3 {
+    color: var(--blue, #09035d);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  p {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  span {
+    color: var(--dark-violet, #7871de);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    row-gap: 60px;
+  }
 `;
 
 export const ShortLi = styled.li`
@@ -358,6 +403,37 @@ export const ShortLi = styled.li`
 
     font-weight: 600;
   }
+  @media screen and (max-width: 1199px) {
+    width: 294px;
+    padding: 30px;
+    height: fit-content;
+  }
+`;
+
+export const SpecailShortLi = styled.li`
+  display: flex;
+  width: 326px;
+  height: 422px;
+  padding: 30px 30px 0 30px;
+  flex-direction: column;
+  border-radius: 4px;
+  background: var(--wight, #fff);
+  box-shadow: 4px 4px 20px 0px rgba(120, 113, 222, 0.1),
+    -4px -4px 20px 0px rgba(120, 113, 222, 0.1);
+  h4 {
+    color: var(--blue, #09035d);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+
+    font-weight: 600;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 294px;
+    padding: 30px;
+    height: fit-content;
+    margin-top: -179px;
+    margin-right: auto;
+  }
 `;
 
 export const LongerLi = styled.li`
@@ -372,6 +448,14 @@ export const LongerLi = styled.li`
   background: var(--wight, #fff);
   box-shadow: 4px 4px 20px 0px rgba(120, 113, 222, 0.1),
     -4px -4px 20px 0px rgba(120, 113, 222, 0.1);
+
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    width: 294px;
+    height: fit-content;
+    padding: 30px;
+    margin-top: -30px;
+  }
 `;
 
 export const SpecialSpan = styled.span`
@@ -413,6 +497,9 @@ export const TitleContainer = styled.div`
     font-size: 36px;
     font-weight: 400;
   }
+  @media screen and (max-width: 1199px) {
+    width: 748px;
+  }
 `;
 
 export const ListTrainingFirst = styled.ul`
@@ -439,6 +526,29 @@ export const ListTrainingFirst = styled.ul`
     font-weight: 600;
     pointer-events: none;
   }
+  @media screen and (max-width: 1199px) {
+    column-gap: 20px;
+    h2 {
+      margin-bottom: 25px;
+    }
+    li {
+      width: 167px;
+    }
+    p {
+      font-weight: 400;
+    }
+  }
+`;
+
+export const LineImg = styled.img`
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+`;
+export const LineImgTablet = styled.img`
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const ListTrainingSecond = styled.ul`
@@ -464,6 +574,18 @@ export const ListTrainingSecond = styled.ul`
     font-weight: 600;
     pointer-events: none;
   }
+  @media screen and (max-width: 1199px) {
+    column-gap: 20px;
+    h2 {
+      margin-bottom: 25px;
+    }
+    li {
+      width: 167px;
+    }
+    p {
+      font-weight: 400;
+    }
+  }
 `;
 
 export const SpecialLi = styled.li`
@@ -474,6 +596,13 @@ export const SpecialLi = styled.li`
 
 export const SixthSection = styled.section`
   margin: 80px 0;
+  @media screen and (max-width: 1199px) {
+    width: 728px;
+    padding: 0 20px;
+    div {
+      width: 100%;
+    }
+  }
 `;
 
 // seven section
@@ -494,10 +623,51 @@ export const TitleCommandsCon = styled.div`
     margin-bottom: 60px;
     margin-right: auto;
   }
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+`;
+
+export const TitleCommandsConTablet = styled.div`
+  width: 768px;
+  h2 {
+    color: var(--blue, #09035d);
+    font-family: 'SeoulHangang', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100.023%;
+    margin-bottom: 60px;
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const ImgLineBall = styled.img`
   width: 772px;
+  /* @media screen and (max-width: 1199px) {
+    display: none;
+  } */
+`;
+
+export const ImgLineBallTablet = styled.img`
+  width: 561px;
+  margin-left: auto;
+  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+`;
+
+export const ImgLineBallTabletTwo = styled.img`
+  width: 405px;
+  margin-top: 90px;
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const ContainerLine = styled.div`
@@ -517,6 +687,20 @@ export const ContainerLine = styled.div`
     font-weight: 400;
     margin-left: 15px;
   }
+  h4 {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: auto;
+  }
+  @media screen and (max-width: 1199px) {
+    span {
+      margin-left: 15px;
+      margin: auto;
+      margin-bottom: -13px;
+    }
+  }
 `;
 
 export const ListComands = styled.ul`
@@ -533,6 +717,11 @@ export const ListComands = styled.ul`
     width: 282px;
     display: flex;
     align-items: flex-end;
+  }
+
+  @media screen and (max-width: 1199px) {
+    gap: 4px;
+    margin-left: 212px;
   }
 `;
 
@@ -554,6 +743,11 @@ export const ListComandsSecond = styled.ul`
   }
   span {
     font-size: 16px;
+  }
+  @media screen and (max-width: 1199px) {
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 `;
 

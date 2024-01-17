@@ -7,7 +7,12 @@ import HoneTabletImg from '../images/HomeTablet.png';
 
 import ArrayReason from './helpers/arrayReason';
 import Line from '../images/SVG/line.svg';
+import LineTablet from '../images/SVG/LineTablet.svg';
+
 import LineBall from '../images/lineBall.png';
+import LineBallTablet from '../images/lineBallTablet.png';
+import LineBallTabletTwo from '../images/lineBallTabletTwo.png';
+
 import ArrowClose from '../images/SVG/arrowClose.svg';
 
 import {
@@ -36,7 +41,9 @@ import {
   FourthSection,
   TitleAnswer,
   AnswerList,
+  AnswerListReviewed,
   ShortLi,
+  SpecailShortLi,
   LongerLi,
   SpecialSpan,
   SpecialP,
@@ -44,6 +51,8 @@ import {
   Fifthsection,
   FifthsectionContainer,
   ListTrainingFirst,
+  LineImg,
+  LineImgTablet,
   ListTrainingSecond,
   SpecialLi,
   TitleContainer,
@@ -52,8 +61,10 @@ import {
   // seven section
   SevenSection,
   TitleCommandsCon,
+  TitleCommandsConTablet,
   ContainerLine,
   ImgLineBall,
+  ImgLineBallTablet,
   ListComands,
   ListComandsSecond,
   // eighth section
@@ -62,6 +73,7 @@ import {
   Answer,
   ArrowClosed,
   ListQuestion,
+  ImgLineBallTabletTwo,
 } from './app.styled';
 
 const App = () => {
@@ -208,7 +220,7 @@ const App = () => {
                 причин.
               </SpecialP>
             </LongerLi>
-            <ShortLi>
+            <SpecailShortLi>
               <h3>Досвід роботи</h3>
               <p>
                 <span>200</span> дресованих собак, які отримали <span>350</span>
@@ -221,7 +233,7 @@ const App = () => {
               <SpecialP>
                 <span> 2600</span> годин спільних занять та зустрічей
               </SpecialP>
-            </ShortLi>
+            </SpecailShortLi>
           </AnswerList>
         </div>
       </FourthSection>
@@ -249,7 +261,9 @@ const App = () => {
               <p>Дізнаюся зручний час занять</p>
             </SpecialLi>
           </ListTrainingFirst>
-          <img width="100%" src={Line} alt="Line" />
+          <LineImg width="100%" src={Line} alt="Line" />
+          <LineImgTablet width="100%" src={LineTablet} alt="Line" />
+
           <ListTrainingSecond>
             <li>
               <h2>05</h2>
@@ -270,6 +284,7 @@ const App = () => {
           </ListTrainingSecond>
         </FifthsectionContainer>
       </Fifthsection>
+
       <section id="form">
         <Form />
       </section>
@@ -277,7 +292,7 @@ const App = () => {
       <SixthSection id="reviews">
         <div>
           <TitleAnswer>Відгуки</TitleAnswer>
-          <AnswerList>
+          <AnswerListReviewed>
             <ShortLi>
               <p>
                 Я хочу сказати велике спасибі вам! Ви були з нами в
@@ -299,11 +314,11 @@ const App = () => {
               <p>Вона той фахівець, якого я шукала кілька місяців.</p>
               <h4>Інна Муравйова</h4>
             </ShortLi>
-            <ShortLi>
+            <SpecailShortLi>
               <p>Спасибо вам огромное</p>
               <h4>Олександр М.</h4>
-            </ShortLi>
-          </AnswerList>
+            </SpecailShortLi>
+          </AnswerListReviewed>
         </div>
       </SixthSection>
 
@@ -324,7 +339,9 @@ const App = () => {
           </ListComands>
           <ContainerLine>
             <h3>КОМАНДИ</h3>
+
             <ImgLineBall src={LineBall} alt="LineBall" />
+
             <span>4500₴</span>
           </ContainerLine>
           <ListComandsSecond>
@@ -341,6 +358,53 @@ const App = () => {
             </li>
           </ListComandsSecond>
         </TitleCommandsCon>
+        <TitleCommandsConTablet>
+          <h2>Чому навчаю</h2>
+
+          <ListComands>
+            <li>
+              <p>«Перестань тягнути повідець»</p>
+            </li>
+            <li>
+              <p>«Поруч»</p>
+            </li>
+            <li>
+              <p>"ФАС"</p>
+            </li>
+          </ListComands>
+
+          <ContainerLine>
+            <h4>КОМАНДИ</h4>
+            <ImgLineBallTablet
+              src={LineBallTablet}
+              teams
+              alt="LineBallTablet"
+            />
+          </ContainerLine>
+
+          <ContainerLine>
+            <ImgLineBallTabletTwo
+              src={LineBallTabletTwo}
+              teams
+              alt="LineBallTablet"
+            />
+            <span>4500₴</span>
+          </ContainerLine>
+
+          <ListComandsSecond>
+            <li>
+              <p>"До мене"</p>
+            </li>
+            <li>
+              <p>
+                «Тріо<span>: сидіти, стояти, лежати»</span>
+              </p>
+            </li>
+            <li>
+              <p>"ФУ"</p>
+            </li>
+          </ListComandsSecond>
+        </TitleCommandsConTablet>
       </SevenSection>
 
       <Form />
