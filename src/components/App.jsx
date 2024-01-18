@@ -4,6 +4,7 @@ import Footer from './footer/footer';
 import Form from './form/Form';
 import HoneImg from '../images/Home.png';
 import HoneTabletImg from '../images/HomeTablet.png';
+import HomeMoblie from '../images/HomeMoblie.png';
 
 import ArrayReason from './helpers/arrayReason';
 import Line from '../images/SVG/line.svg';
@@ -23,6 +24,7 @@ import {
   HomeContent,
   ImgDog,
   ImgTabletDog,
+  ImgMobileDog,
   // second section
   InfoContainer,
   InfoList,
@@ -131,6 +133,7 @@ const App = () => {
           </HomeContainer>
           <ImgDog src={HoneImg} alt="" />
           <ImgTabletDog src={HoneTabletImg} alt="" />
+          <ImgMobileDog src={HomeMoblie} alt="HomeMoblie"/>
         </GeneralContainer>
       </FirstSection>
 

@@ -6,8 +6,11 @@ export const Container = styled.header`
   align-items: center;
   margin-bottom: 40px;
   @media screen and (max-width: 1199px) {
-width: 728px;
-
+    width: 728px;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 767px) {
+    width: 320px;
   }
 `;
 
@@ -15,6 +18,12 @@ export const Nav = styled.nav`
   display: flex;
   margin-left: 94px;
   gap: 40px;
+`;
+
+export const BurgerMenuImg = styled.img`
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const List = styled.ul`
@@ -36,6 +45,9 @@ export const Anchor = styled.a`
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
+  @media screen and (max-width: 1199px) {
+    color: #fff;
+  }
 `;
 
 export const ListMedia = styled.ul`

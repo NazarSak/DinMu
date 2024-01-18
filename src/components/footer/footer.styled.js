@@ -12,6 +12,9 @@ export const SectionContainer = styled.div`
   width: 100%;
   gap: 450px;
   padding: 30px 0 20px 0;
+  @media screen and (max-width: 1199px) {
+    gap: 165px;
+  }
 `;
 
 export const ListMedia = styled.ul`

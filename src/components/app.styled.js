@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const FirstSection = styled.section`
   background: var(--violet, #edebfc);
   padding: 40px 0 80px;
+  @media screen and (max-width: 767px) {
+    padding: 20px 0 60px;
+  }
 `;
 
 export const SecondSection = styled.section``;
@@ -11,6 +14,9 @@ export const GeneralContainer = styled.div`
   display: flex;
   @media screen and (max-width: 1199px) {
     flex-direction: column-reverse;
+  }
+  @media screen and (max-width: 767px) {
+    align-items: center;
   }
 `;
 
@@ -24,6 +30,9 @@ export const HomeContainer = styled.div`
   @media screen and (max-width: 1200px) {
     background: transparent;
     width: 653px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 320px;
   }
 `;
 
@@ -75,6 +84,12 @@ export const HomeContent = styled.div`
     width: 100%;
     margin-top: 25px;
   }
+  @media screen and (max-width: 767px) {
+    button {
+      width: 100%;
+      padding: 12px 30px 12px 32px;
+    }
+  }
 `;
 
 export const ImgDog = styled.img`
@@ -86,11 +101,20 @@ export const ImgDog = styled.img`
 `;
 
 export const ImgTabletDog = styled.img`
-  @media screen and (min-width: 1200px) {
+  display: none;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    width: 728px;
+    height: 421px;
+  }
+`;
+
+export const ImgMobileDog = styled.img`
+  @media screen and (min-width: 768px) {
     display: none;
   }
-  width: 728px;
-  height: 421px;
+  width: 320px;
+  height: 380px;
 `;
 
 // second Section
@@ -101,6 +125,11 @@ export const InfoContainer = styled.div`
   @media screen and (max-width: 1199px) {
     width: 728px;
     height: 142px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 320px;
+    height: 230px;
+    margin-top: 60px;
   }
 `;
 
@@ -135,6 +164,16 @@ export const InfoList = styled.ul`
       height: 142px;
     }
   }
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    li {
+      width: 150px;
+      height: 105px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+  }
 `;
 
 export const ReasonContainer = styled.div`
@@ -160,6 +199,14 @@ export const ReasonContainer = styled.div`
     height: 420px;
     ul {
       gap: 20px;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: 320px;
+    height: 778px;
+    h2 {
+      font-size: 29px;
     }
   }
 `;
@@ -200,6 +247,9 @@ export const ReasonInfo = styled.div`
     align-items: center;
     padding: 20px;
   }
+  @media screen and (max-width: 768px) {
+    width: 110px;
+  }
 `;
 
 export const ImgSvg = styled.svg`
@@ -222,6 +272,9 @@ export const ThirdSection = styled.section`
   @media screen and (max-width: 1199px) {
     padding: 80px 0;
   }
+  @media screen and (max-width: 768px) {
+    padding: 60px 0;
+  }
 `;
 
 export const ContainerWrapper = styled.div``;
@@ -236,6 +289,10 @@ export const TitleThird = styled.h2`
   @media screen and (max-width: 1199px) {
     margin-left: 0;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    margin-left: 20px;
+  }
 `;
 
 export const ExperienceContainer = styled.div`
@@ -244,6 +301,10 @@ export const ExperienceContainer = styled.div`
   @media screen and (max-width: 1199px) {
     width: 728px;
     height: 289px;
+  }
+  @media screen and (max-width: 768px) {
+    width: auto;
+    height: auto;
   }
 `;
 
@@ -254,6 +315,10 @@ export const ExperienceList = styled.ul`
   @media screen and (max-width: 1199px) {
     gap: 20px;
     margin-top: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-left: 20px;
   }
 `;
 
@@ -278,12 +343,21 @@ export const FirstExperienceCon = styled.li`
     width: 354px;
     height: 289px;
   }
+  @media screen and (max-width: 768px) {
+    width: 320px;
+    height: fit-content;
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const SecondExperienceCon = styled.li`
   width: 386px;
   height: 129px;
-
   h3 {
     color: var(--green, #9fdb3d);
     font-family: 'SeoulHangang', sans-serif;
@@ -302,6 +376,16 @@ export const SecondExperienceCon = styled.li`
   @media screen and (max-width: 1199px) {
     width: 354px;
     height: 127px;
+  }
+  @media screen and (max-width: 768px) {
+    height: fit-content;
+    width: 320px;
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -648,9 +732,6 @@ export const TitleCommandsConTablet = styled.div`
 
 export const ImgLineBall = styled.img`
   width: 772px;
-  /* @media screen and (max-width: 1199px) {
-    display: none;
-  } */
 `;
 
 export const ImgLineBallTablet = styled.img`
@@ -762,6 +843,9 @@ export const ListQuestion = styled.ul`
   flex-direction: column;
   row-gap: 19px;
   width: 802px;
+  @media screen and (max-width: 1199px) {
+    width: 728px;
+  }
 `;
 
 export const Question = styled.span`
@@ -774,6 +858,9 @@ export const Question = styled.span`
   width: 740px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1199px) {
+    width: 728px;
+  }
 `;
 
 export const Answer = styled.div`

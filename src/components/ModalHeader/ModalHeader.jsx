@@ -1,39 +1,25 @@
-import React, { useState } from 'react';
-import ModalHeader from 'components/ModalHeader/ModalHeader';
+import React from 'react';
+
 import Logo from '../../images/logo.png';
 import Viber from '../../images/SVG/viber.svg';
 import Facebbok from '../../images/SVG/facebook.svg';
 import Vk from '../../images/SVG/vk.svg';
 import Telegram from '../../images/SVG/telegram.svg';
-import BurgerMenu from '../../images/SVG/BurgerMenu.svg';
+import CloseBurger from '../../images/SVG/CloseBurger.svg';
+import { Anchor } from 'components/header/header.styled';
 import {
-  Anchor,
+  Overlay,
+  Content,
+  CloseBurg,
   List,
-  Container,
-  Nav,
-  BurgerMenuImg,
   ListMedia,
-  Img,
-} from './header.styled';
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+} from './modalHeader.styled';
 
-  const hadnleBurger = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const scrollToSection = sectionId => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false)
-    }
-  };
-
+const ModalHeader = ({ isOpen, hadnleClose, scrollToSection }) => {
   return (
-    <Container>
-      <img width="112px" height="32px" src={Logo} alt="ad" />
-      <Nav>
+    <Overlay isopen={isOpen ? 1 : 0}>
+      <Content>
+        <CloseBurg onClick={hadnleClose} src={CloseBurger} alt="" />
         <List>
           <li>
             <Anchor onClick={() => scrollToSection('reasons')}>
@@ -67,12 +53,10 @@ const Header = () => {
             </Anchor>
           </li>
         </List>
-        <BurgerMenuImg onClick={hadnleBurger} src={BurgerMenu} alt="BurgerMenu" />
-         <ModalHeader isOpen={isOpen} hadnleClose={hadnleBurger} scrollToSection={scrollToSection}/>
 
         <ListMedia>
           <li>
-            <Img src={Viber} alt="" />
+            <img src={Viber} alt="" />
           </li>
           <li>
             <img src={Facebbok} alt="" />
@@ -84,9 +68,9 @@ const Header = () => {
             <img src={Telegram} alt="" />
           </li>
         </ListMedia>
-      </Nav>
-    </Container>
+      </Content>
+    </Overlay>
   );
 };
 
-export default Header;
+export default ModalHeader;
