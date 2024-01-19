@@ -9,6 +9,8 @@ import HomeMoblie from '../images/HomeMoblie.png';
 import ArrayReason from './helpers/arrayReason';
 import Line from '../images/SVG/line.svg';
 import LineTablet from '../images/SVG/LineTablet.svg';
+import LeftLineBall from '../images/LeftLineBall.png';
+import RightLineBall from '../images/RightLineBall.png';
 
 import LineBall from '../images/lineBall.png';
 import LineBallTablet from '../images/lineBallTablet.png';
@@ -65,10 +67,13 @@ import {
   TitleCommandsCon,
   TitleCommandsConTablet,
   ContainerLine,
+  LeftLineBallImg,
   ImgLineBall,
   ImgLineBallTablet,
   ListComands,
   ListComandsSecond,
+  ContainerWordsMobile,
+  ContainerWordsMobileSecond,
   // eighth section
   EighthSection,
   Question,
@@ -133,7 +138,7 @@ const App = () => {
           </HomeContainer>
           <ImgDog src={HoneImg} alt="" />
           <ImgTabletDog src={HoneTabletImg} alt="" />
-          <ImgMobileDog src={HomeMoblie} alt="HomeMoblie"/>
+          <ImgMobileDog src={HomeMoblie} alt="HomeMoblie" />
         </GeneralContainer>
       </FirstSection>
 
@@ -367,12 +372,18 @@ const App = () => {
           <ListComands>
             <li>
               <p>«Перестань тягнути повідець»</p>
+              <ContainerWordsMobile>
+                <h3>КОМАНДИ</h3>
+              </ContainerWordsMobile>
+                <LeftLineBallImg src={LeftLineBall} alt="LeftLineBallImg" />
             </li>
             <li>
               <p>«Поруч»</p>
+              <LeftLineBallImg src={LeftLineBall} alt="LeftLineBallImg" />
             </li>
             <li>
               <p>"ФАС"</p>
+              <LeftLineBallImg src={LeftLineBall} alt="LeftLineBallImg" />
             </li>
           </ListComands>
 
@@ -397,14 +408,20 @@ const App = () => {
           <ListComandsSecond>
             <li>
               <p>"До мене"</p>
+              <LeftLineBallImg src={RightLineBall} alt="LeftLineBallImg" />
             </li>
             <li>
               <p>
                 «Тріо<span>: сидіти, стояти, лежати»</span>
               </p>
+              <LeftLineBallImg src={RightLineBall} alt="LeftLineBallImg" />
             </li>
             <li>
               <p>"ФУ"</p>
+              <LeftLineBallImg src={RightLineBall} alt="LeftLineBallImg" />
+              <ContainerWordsMobileSecond>
+              <h3>4500₴</h3> 
+              </ContainerWordsMobileSecond>
             </li>
           </ListComandsSecond>
         </TitleCommandsConTablet>

@@ -22,6 +22,7 @@ import styled from 'styled-components';
 // `;
 
 export const Overlay = styled.div`
+  display: none;
   @media (max-width: 1199px) {
     position: fixed;
     display: block;

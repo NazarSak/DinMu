@@ -5,6 +5,9 @@ import DisableChecker from '../../images/SVG/disableCheckMak.svg';
 export const Section = styled.section`
   background-color: var(--dark-violet, #7871de);
   padding: 80px 0;
+  @media screen and (max-width: 767px) {
+    padding: 60px 0;
+  }
 `;
 
 export const FormCon = styled.form`
@@ -12,7 +15,13 @@ export const FormCon = styled.form`
   gap: 135px;
   align-items: center;
   @media screen and (max-width: 1199px) {
-  gap: 30px;
+    gap: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    gap: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
   }
 `;
 
@@ -34,6 +43,11 @@ export const Input = styled.input`
   background: var(--wight, #fff);
   &:focus {
     border: 2px solid var(--green, #9fdb3d);
+  }
+  @media screen and (max-width: 767px) {
+    width: 278px;
+    height: 22px;
+    padding: 20px;
   }
 `;
 
@@ -58,6 +72,9 @@ export const Button = styled.button`
   transition: all 0.7s ease;
   &:hover {
     background: var(--dark-violet, #7871de);
+  }
+  @media screen and (max-width: 767px) {
+    width: 320px;
   }
 `;
 

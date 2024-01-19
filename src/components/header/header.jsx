@@ -6,7 +6,7 @@ import Facebbok from '../../images/SVG/facebook.svg';
 import Vk from '../../images/SVG/vk.svg';
 import Telegram from '../../images/SVG/telegram.svg';
 import BurgerMenu from '../../images/SVG/BurgerMenu.svg';
-import {
+import { 
   Anchor,
   List,
   Container,

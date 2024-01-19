@@ -102,7 +102,7 @@ export const ImgDog = styled.img`
 
 export const ImgTabletDog = styled.img`
   display: none;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
     display: block;
     width: 728px;
     height: 421px;
@@ -110,7 +110,7 @@ export const ImgTabletDog = styled.img`
 `;
 
 export const ImgMobileDog = styled.img`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     display: none;
   }
   width: 320px;
@@ -126,7 +126,7 @@ export const InfoContainer = styled.div`
     width: 728px;
     height: 142px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: 320px;
     height: 230px;
     margin-top: 60px;
@@ -164,7 +164,7 @@ export const InfoList = styled.ul`
       height: 142px;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     flex-wrap: wrap;
     li {
       width: 150px;
@@ -202,7 +202,7 @@ export const ReasonContainer = styled.div`
       justify-content: center;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: 320px;
     height: 778px;
     h2 {
@@ -247,7 +247,7 @@ export const ReasonInfo = styled.div`
     align-items: center;
     padding: 20px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: 110px;
   }
 `;
@@ -272,7 +272,7 @@ export const ThirdSection = styled.section`
   @media screen and (max-width: 1199px) {
     padding: 80px 0;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     padding: 60px 0;
   }
 `;
@@ -289,7 +289,7 @@ export const TitleThird = styled.h2`
   @media screen and (max-width: 1199px) {
     margin-left: 0;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     font-size: 30px;
     margin-left: 20px;
   }
@@ -302,7 +302,7 @@ export const ExperienceContainer = styled.div`
     width: 728px;
     height: 289px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: auto;
     height: auto;
   }
@@ -316,7 +316,7 @@ export const ExperienceList = styled.ul`
     gap: 20px;
     margin-top: 40px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     margin-left: 20px;
   }
@@ -343,7 +343,7 @@ export const FirstExperienceCon = styled.li`
     width: 354px;
     height: 289px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: 320px;
     height: fit-content;
     h3 {
@@ -377,7 +377,7 @@ export const SecondExperienceCon = styled.li`
     width: 354px;
     height: 127px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     height: fit-content;
     width: 320px;
     h3 {
@@ -400,6 +400,9 @@ export const FourthSection = styled.section`
       width: 100%;
     }
   }
+  @media screen and (max-width: 767px) {
+    width: 320px;
+  }
 `;
 
 export const TitleAnswer = styled.h2`
@@ -409,6 +412,9 @@ export const TitleAnswer = styled.h2`
   font-style: normal;
   font-weight: 400;
   line-height: 100.023%;
+  @media screen and (max-width: 767px) {
+    font-size: 30px;
+  }
 `;
 
 export const AnswerList = styled.ul`
@@ -437,6 +443,10 @@ export const AnswerList = styled.ul`
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+    gap: 10px;
   }
 `;
 
@@ -467,6 +477,9 @@ export const AnswerListReviewed = styled.ul`
     justify-content: center;
     gap: 20px;
     row-gap: 60px;
+  }
+  @media screen and (max-width: 767px) {
+    row-gap: 10px;
   }
 `;
 
@@ -518,6 +531,9 @@ export const SpecailShortLi = styled.li`
     margin-top: -179px;
     margin-right: auto;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 0px;
+  }
 `;
 
 export const LongerLi = styled.li`
@@ -539,6 +555,9 @@ export const LongerLi = styled.li`
     height: fit-content;
     padding: 30px;
     margin-top: -30px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 0px;
   }
 `;
 
@@ -584,6 +603,13 @@ export const TitleContainer = styled.div`
   @media screen and (max-width: 1199px) {
     width: 748px;
   }
+  @media screen and (max-width: 767px) {
+    width: fit-content;
+    margin-left: -30px;
+  }
+  h2 {
+    font-size: 30px;
+  }
 `;
 
 export const ListTrainingFirst = styled.ul`
@@ -622,6 +648,13 @@ export const ListTrainingFirst = styled.ul`
       font-weight: 400;
     }
   }
+  @media screen and (max-width: 767px) {
+    width: 320px;
+    flex-wrap: wrap;
+    li {
+      width: 150px;
+    }
+  }
 `;
 
 export const LineImg = styled.img`
@@ -631,6 +664,9 @@ export const LineImg = styled.img`
 `;
 export const LineImgTablet = styled.img`
   @media screen and (min-width: 1200px) {
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;
@@ -670,10 +706,23 @@ export const ListTrainingSecond = styled.ul`
       font-weight: 400;
     }
   }
+  @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
+      width: 320px;
+      flex-wrap: wrap;
+      margin-top: -30px;
+    }
+    li {
+      width: 150px;
+    }
+  }
 `;
 
 export const SpecialLi = styled.li`
   margin-top: 60px;
+  @media screen and (max-width: 767px) {
+    margin-top: 15px;
+  }
 `;
 
 // sixth section
@@ -686,6 +735,9 @@ export const SixthSection = styled.section`
     div {
       width: 100%;
     }
+  }
+  @media screen and (max-width: 767px) {
+    width: 320px;
   }
 `;
 
@@ -713,7 +765,7 @@ export const TitleCommandsCon = styled.div`
 `;
 
 export const TitleCommandsConTablet = styled.div`
-  width: 768px;
+  width: 767px;
   h2 {
     color: var(--blue, #09035d);
     font-family: 'SeoulHangang', sans-serif;
@@ -727,6 +779,10 @@ export const TitleCommandsConTablet = styled.div`
   }
   @media screen and (min-width: 1200px) {
     display: none;
+  }
+  @media screen and (max-width: 767px) {
+    width: 360px;
+    position: relative;
   }
 `;
 
@@ -782,6 +838,41 @@ export const ContainerLine = styled.div`
       margin-bottom: -13px;
     }
   }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const ContainerLineMobile = styled.div`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  h3 {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  span {
+    color: var(--black, #0f0f10);
+    font-family: SeoulHangang, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin-left: 15px;
+  }
+  h4 {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+  }
 `;
 
 export const ListComands = styled.ul`
@@ -803,6 +894,29 @@ export const ListComands = styled.ul`
   @media screen and (max-width: 1199px) {
     gap: 4px;
     margin-left: 212px;
+  }
+
+  @media screen and (max-width: 767px) {
+    gap: 167px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    li {
+      width: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 10px;
+    }
+  }
+`;
+
+export const LeftLineBallImg = styled.img`
+  width: 170px;
+  height: 20px;
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 `;
 
@@ -830,6 +944,53 @@ export const ListComandsSecond = styled.ul`
     margin-left: 20px;
     margin-top: 20px;
   }
+  @media screen and (max-width: 767px) {
+    gap: 150px;
+    margin-left: -5px;
+    margin-top: -419px;
+    display: flex;
+    flex-direction: column;
+    li {
+      width: 175px;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      align-items: baseline;
+    }
+    p {
+      margin-left: 25px;
+    }
+  }
+`;
+
+export const ContainerWordsMobile = styled.div`
+  h3 {
+    color: var(--black, #0f0f10);
+    font-family: 'Post No Bills Colombo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    left: 20px;
+    top: 201px;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const ContainerWordsMobileSecond = styled.div`
+  h3 {
+    color: var(--black, #0f0f10);
+    font-family: SeoulHangang, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    position: absolute;
+    right: 79px;
+    bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 // eighth section
@@ -846,6 +1007,9 @@ export const ListQuestion = styled.ul`
   @media screen and (max-width: 1199px) {
     width: 728px;
   }
+  @media screen and (max-width: 767px) {
+    width: 320px;
+  }
 `;
 
 export const Question = styled.span`
@@ -860,6 +1024,9 @@ export const Question = styled.span`
   justify-content: space-between;
   @media screen and (max-width: 1199px) {
     width: 728px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 320px;
   }
 `;
 

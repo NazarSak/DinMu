@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   background: var(--violet, #edebfc);
-  /* height: 110px; */
 `;
 
 export const SectionContainer = styled.div`
@@ -15,12 +14,47 @@ export const SectionContainer = styled.div`
   @media screen and (max-width: 1199px) {
     gap: 165px;
   }
+  @media screen and (max-width: 767px) {
+    gap: 80px;
+  }
 `;
 
 export const ListMedia = styled.ul`
   display: flex;
   align-items: center;
   gap: 4px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const ListMediaMobile = styled.ul`
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  align-items: flex-end;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const TextMobile = styled.h2`
+  color: var(--blue, #09035d);
+  font-family: 'Post No Bills Colombo', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  flex-direction: inherit;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const List = styled.ul`
+  display: flex;
+  gap: 2px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Text = styled.p`
@@ -29,4 +63,7 @@ export const Text = styled.p`
   font-size: 14px;
   font-weight: 400;
   flex-direction: inherit;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
