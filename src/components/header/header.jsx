@@ -6,7 +6,7 @@ import Facebbok from '../../images/SVG/facebook.svg';
 import Vk from '../../images/SVG/vk.svg';
 import Telegram from '../../images/SVG/telegram.svg';
 import BurgerMenu from '../../images/SVG/BurgerMenu.svg';
-import { 
+import {
   Anchor,
   List,
   Container,
@@ -20,13 +20,17 @@ const Header = () => {
 
   const hadnleBurger = () => {
     setIsOpen(!isOpen);
+    console.log(isOpen);
   };
 
   const scrollToSection = sectionId => {
+    const mainElement = document.querySelector('main');
+
     const section = document.getElementById(sectionId);
     if (section) {
+      mainElement.style.position = 'static';
       section.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false)
+      setIsOpen(false);
     }
   };
 
@@ -67,8 +71,17 @@ const Header = () => {
             </Anchor>
           </li>
         </List>
-        <BurgerMenuImg onClick={hadnleBurger} src={BurgerMenu} alt="BurgerMenu" />
-         <ModalHeader isOpen={isOpen} hadnleClose={hadnleBurger} scrollToSection={scrollToSection}/>
+
+        <BurgerMenuImg
+          onClick={hadnleBurger}
+          src={BurgerMenu}
+          alt="BurgerMenu"
+        />
+        <ModalHeader
+          isOpen={isOpen}
+          handleClose={hadnleBurger}
+          scrollToSection={scrollToSection}
+        />
 
         <ListMedia>
           <li>

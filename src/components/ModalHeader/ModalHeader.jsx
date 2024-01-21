@@ -1,6 +1,4 @@
-import React from 'react';
-
-import Logo from '../../images/logo.png';
+import React, { useEffect } from 'react';
 import Viber from '../../images/SVG/viber.svg';
 import Facebbok from '../../images/SVG/facebook.svg';
 import Vk from '../../images/SVG/vk.svg';
@@ -15,11 +13,26 @@ import {
   ListMedia,
 } from './modalHeader.styled';
 
-const ModalHeader = ({ isOpen, hadnleClose, scrollToSection }) => {
+const ModalHeader = ({ isOpen, handleClose, scrollToSection }) => {
+
+  useEffect(() => {
+    const mainElement = document.querySelector('main');
+
+    if (isOpen) {
+      mainElement.style.position = 'fixed';
+    } else {
+      mainElement.style.position = 'static';
+    }
+
+    return () => {
+      mainElement.style.position = 'static'; 
+    };
+  }, [isOpen]);
+
   return (
     <Overlay isopen={isOpen ? 1 : 0}>
       <Content>
-        <CloseBurg onClick={hadnleClose} src={CloseBurger} alt="" />
+        <CloseBurg onClick={handleClose} src={CloseBurger} alt="" />
         <List>
           <li>
             <Anchor onClick={() => scrollToSection('reasons')}>
